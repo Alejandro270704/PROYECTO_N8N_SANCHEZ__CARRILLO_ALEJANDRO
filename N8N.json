@@ -11,8 +11,8 @@
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.2,
       "position": [
-        240,
-        -80
+        336,
+        160
       ],
       "id": "7dd32b47-7aec-4b1e-bc0a-93d360d169a4",
       "name": "Telegram Trigger",
@@ -327,6 +327,29 @@
                 ],
                 "combinator": "and"
               }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "e613ad33-6ae8-4ea7-bfef-9cee0ffc71d6",
+                    "leftValue": "={{ $json.pantalla == 'FLUJO_TERMINADO' }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
             }
           ]
         },
@@ -337,8 +360,8 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        1440,
-        240
+        1504,
+        272
       ],
       "id": "aa09cc45-c44b-4a3b-ac78-137b6bc05062",
       "name": "Switch"
@@ -358,8 +381,8 @@
       "type": "n8n-nodes-base.sort",
       "typeVersion": 1,
       "position": [
-        1328,
-        -112
+        1312,
+        -16
       ],
       "id": "f2b9944e-e688-4572-9638-d864979ff313",
       "name": "Sort",
@@ -403,7 +426,7 @@
       "typeVersion": 2.3,
       "position": [
         1008,
-        -48
+        96
       ],
       "id": "8ccfe6e1-e263-48de-9457-a3b7a120637e",
       "name": "Filter"
@@ -413,8 +436,8 @@
       "type": "n8n-nodes-base.limit",
       "typeVersion": 1,
       "position": [
-        1440,
-        32
+        1472,
+        64
       ],
       "id": "a830fd04-02ff-4d62-8ecc-f55b4193dd6e",
       "name": "Limit"
@@ -444,8 +467,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        832,
-        -48
+        880,
+        128
       ],
       "id": "6d5c4b13-09c2-469d-a3fb-8b23620891d6",
       "name": "LOGS",
@@ -486,8 +509,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        416,
-        0
+        512,
+        192
       ],
       "id": "8e6517d7-b86b-4f21-8b2e-eeaffe062f3b",
       "name": "USUARIOS",
@@ -622,7 +645,7 @@
       "typeVersion": 2.3,
       "position": [
         1168,
-        -32
+        112
       ],
       "id": "0848db0b-4498-4156-a73b-507c6384e008",
       "name": "If"
@@ -1169,7 +1192,7 @@
       "typeVersion": 3.4,
       "position": [
         2064,
-        192
+        176
       ],
       "id": "134a2edf-c5a3-4f78-9939-04f48004f9a6",
       "name": "Switch1"
@@ -1186,7 +1209,7 @@
       "typeVersion": 1.2,
       "position": [
         2288,
-        48
+        32
       ],
       "id": "584f965d-6485-464f-9d7b-ba6bb0bf6849",
       "name": "Send a text message7",
@@ -1210,7 +1233,7 @@
       "typeVersion": 1.2,
       "position": [
         2816,
-        48
+        32
       ],
       "id": "ffd82a5e-d4c6-4a5a-a03f-429a4eb65cbe",
       "name": "Send a text message8",
@@ -1305,7 +1328,7 @@
       "typeVersion": 4.7,
       "position": [
         2480,
-        48
+        32
       ],
       "id": "f815099d-4ab6-4695-ba28-c8120d16a130",
       "name": "ABRIR LOGS4",
@@ -1422,7 +1445,7 @@
       "typeVersion": 4.7,
       "position": [
         2640,
-        48
+        32
       ],
       "id": "3432dc36-5fe5-4e27-84d6-751a0a6abdb1",
       "name": "SOLICITUDES",
@@ -1446,7 +1469,7 @@
       "typeVersion": 1.2,
       "position": [
         2288,
-        176
+        160
       ],
       "id": "8aadf596-d5fe-431b-bda8-88ac1987ba02",
       "name": "Send a text message9",
@@ -1482,7 +1505,7 @@
             "timestamp": "={{ $now }}",
             "opcion": "={{ $node[\"Telegram Trigger\"].json.message.text }}",
             "resultado": "={{ $json.result.text }}",
-            "pantalla": "MENU_PRINCIPAL"
+            "pantalla": "MENU_SOLICITUD_TERMINADA"
           },
           "matchingColumns": [],
           "schema": [
@@ -1541,7 +1564,7 @@
       "typeVersion": 4.7,
       "position": [
         2976,
-        48
+        32
       ],
       "id": "946cd02e-fc6f-4221-b019-ee8b3415b508",
       "name": "ABRIR LOGS5",
@@ -1635,7 +1658,7 @@
       "typeVersion": 4.7,
       "position": [
         2464,
-        176
+        160
       ],
       "id": "ea0507a4-c821-4c94-a5cf-8285c424384a",
       "name": "ABRIR LOGS6",
@@ -1658,7 +1681,7 @@
       "typeVersion": 1.2,
       "position": [
         2816,
-        176
+        160
       ],
       "id": "1ebd6e15-4d47-49fb-9e1f-f6c469509cc2",
       "name": "Send a text message10",
@@ -1776,7 +1799,7 @@
       "typeVersion": 4.7,
       "position": [
         2640,
-        176
+        160
       ],
       "id": "934d179d-29e1-498e-aa31-ac9b17816bbf",
       "name": "SOLICITUDES1",
@@ -1871,7 +1894,7 @@
       "typeVersion": 4.7,
       "position": [
         2976,
-        176
+        160
       ],
       "id": "157ef63c-eab7-4458-a677-e8b066689bb0",
       "name": "ABRIR LOGS7",
@@ -1894,7 +1917,7 @@
       "typeVersion": 1.2,
       "position": [
         2288,
-        320
+        304
       ],
       "id": "8e55a0c8-fcea-4996-9408-e58a4124c5b5",
       "name": "Send a text message11",
@@ -1989,7 +2012,7 @@
       "typeVersion": 4.7,
       "position": [
         2448,
-        320
+        304
       ],
       "id": "029ceb27-4947-4fea-8c8a-5073e674d080",
       "name": "ABRIR LOGS8",
@@ -2012,7 +2035,7 @@
       "typeVersion": 1.2,
       "position": [
         2816,
-        320
+        304
       ],
       "id": "0737f819-3b66-4b6f-9da3-a2e92a3d7faa",
       "name": "Send a text message12",
@@ -2130,7 +2153,7 @@
       "typeVersion": 4.7,
       "position": [
         2640,
-        320
+        304
       ],
       "id": "480ea801-dbd0-4acb-9eb3-8e2e25630e22",
       "name": "SOLICITUDES2",
@@ -2225,7 +2248,7 @@
       "typeVersion": 4.7,
       "position": [
         2976,
-        320
+        304
       ],
       "id": "e11688d1-a510-4cd0-bbaf-d6f7c0f9b2ab",
       "name": "ABRIR LOGS9",
@@ -2585,8 +2608,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3,
       "position": [
-        592,
-        16
+        688,
+        224
       ],
       "id": "c2349013-c118-41e1-b2dc-fab4aa3430b3",
       "name": "If1",
@@ -2603,8 +2626,8 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1008,
-        160
+        1232,
+        352
       ],
       "id": "32b57481-dae6-4ba0-bfa9-284fdc191111",
       "name": "Send a text message15",
@@ -2688,8 +2711,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        816,
-        144
+        944,
+        336
       ],
       "id": "c446ff48-f2be-4c9c-ad03-c9e7390642f5",
       "name": "Append row in sheet",
@@ -2844,8 +2867,8 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1680,
-        976
+        1712,
+        1008
       ],
       "id": "fbcb50f8-6a4e-4a81-93ec-1dab440f6178",
       "name": "Send a text message16",
@@ -2869,10 +2892,152 @@
       "typeVersion": 1.2,
       "position": [
         2288,
-        432
+        416
       ],
       "id": "df220990-fb29-4209-a61c-c031096fabab",
       "name": "Send a text message17",
+      "webhookId": "468fd817-d81a-4c92-8e5a-d70a9f4add2e",
+      "credentials": {
+        "telegramApi": {
+          "id": "PyJfsG0XEZnuGP2r",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1z4tDLghBxexg1Dfdt94nXw3jvHj7Cfaurrx9b3avqZ8",
+          "mode": "list",
+          "cachedResultName": "HelpDeskBot",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1z4tDLghBxexg1Dfdt94nXw3jvHj7Cfaurrx9b3avqZ8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 544934564,
+          "mode": "list",
+          "cachedResultName": "LOGS",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1z4tDLghBxexg1Dfdt94nXw3jvHj7Cfaurrx9b3avqZ8/edit#gid=544934564"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "telegram_user": "={{ $node[\"Telegram Trigger\"].json.message.from.id }}",
+            "timestamp": "={{ $now }}",
+            "opcion": "=",
+            "resultado": "={{ $json.result.text }}",
+            "pantalla": "FLUJO_TERMINADO"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "timestamp",
+              "displayName": "timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "telegram_user",
+              "displayName": "telegram_user",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "pantalla",
+              "displayName": "pantalla",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "opcion",
+              "displayName": "opcion",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "resultado",
+              "displayName": "resultado",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        3264,
+        448
+      ],
+      "id": "29888d24-72fe-4f83-9264-bea30fceacc8",
+      "name": "Final",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "fXIwgpDMWBrOJJKV",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "=😎Escribe /start si quieres volver a empezar un chat.",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1712,
+        896
+      ],
+      "id": "d55015b5-4301-470a-a61d-c9ba00ddf9b5",
+      "name": "Send a text message18",
+      "webhookId": "468fd817-d81a-4c92-8e5a-d70a9f4add2e",
+      "credentials": {
+        "telegramApi": {
+          "id": "PyJfsG0XEZnuGP2r",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "si deseas volver al menu presiona /start",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        3424,
+        448
+      ],
+      "id": "ce1f3f75-9774-4332-84fc-94b0c52d0409",
+      "name": "Send a text message19",
       "webhookId": "468fd817-d81a-4c92-8e5a-d70a9f4add2e",
       "credentials": {
         "telegramApi": {
@@ -2994,6 +3159,13 @@
         ],
         [
           {
+            "node": "Send a text message18",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
             "node": "Send a text message16",
             "type": "main",
             "index": 0
@@ -3103,7 +3275,13 @@
     },
     "ABRIR LOGS1": {
       "main": [
-        []
+        [
+          {
+            "node": "Final",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "Send a text message4": {
@@ -3304,7 +3482,13 @@
     },
     "ABRIR LOGS3": {
       "main": [
-        []
+        [
+          {
+            "node": "Final",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "Send a text message5": {
@@ -3387,7 +3571,13 @@
     },
     "ABRIR LOGS12": {
       "main": [
-        []
+        [
+          {
+            "node": "Final",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "Send a text message14": {
@@ -3410,6 +3600,61 @@
       "main": [
         []
       ]
+    },
+    "ABRIR LOGS5": {
+      "main": [
+        [
+          {
+            "node": "Final",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ABRIR LOGS7": {
+      "main": [
+        [
+          {
+            "node": "Final",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ABRIR LOGS9": {
+      "main": [
+        [
+          {
+            "node": "Final",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Final": {
+      "main": [
+        [
+          {
+            "node": "Send a text message19",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a text message13": {
+      "main": [
+        [
+          {
+            "node": "Final",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": true,
@@ -3417,7 +3662,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "7e8c6e88-526b-44da-a068-c2609f973290",
+  "versionId": "561c6959-8e6e-4718-afe3-4c1bca692ff5",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "6c8a9a9c0983ddc37972fbacc4ebc1365a461fb706f9d03153405c1deba8a620"
