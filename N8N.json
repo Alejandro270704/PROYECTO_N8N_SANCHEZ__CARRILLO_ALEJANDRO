@@ -677,7 +677,7 @@
     {
       "parameters": {
         "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "=Centro de Ayuda - HelpDeskBot 🆘\n\nSi tienes problemas con el bot o necesitas soporte técnico humano, aquí tienes las opciones:\n\n• Cómo usar el bot: Responde con los números del menú para navegar.\n• Horario de atención: 24 HORAS.\n\nEscribe /start para volver al menú principal.",
+        "text": "=Centro de Ayuda - HelpDeskBot 🆘\n\nSi tienes problemas con el bot o necesitas soporte técnico humano, aquí tienes las opciones:\n\n• Cómo usar el bot: Responde con los números del menú para navegar.\n• Horario de atención: 24 HORAS.\n\n",
         "additionalFields": {
           "appendAttribution": false
         }
@@ -2618,7 +2618,7 @@
     {
       "parameters": {
         "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "=¡Registro completado con éxito de HelpDeskBot! 🎉\n\nHola {{ $node[\"Telegram Trigger\"].json.message.from.first_name }}, te has registrado en nuestra base de datos.\n\nPresiona el comando de abajo para activar el menú principal:\n/start",
+        "text": "=¡Registro completado con éxito de HelpDeskBot! 🎉\n\nHola {{ $node[\"Telegram Trigger\"].json.message.from.first_name }}, te has registrado en nuestra base de datos.\n",
         "additionalFields": {
           "appendAttribution": false
         }
@@ -2868,7 +2868,7 @@
       "typeVersion": 1.2,
       "position": [
         1712,
-        1008
+        928
       ],
       "id": "fbcb50f8-6a4e-4a81-93ec-1dab440f6178",
       "name": "Send a text message16",
@@ -2995,30 +2995,6 @@
         "googleSheetsOAuth2Api": {
           "id": "fXIwgpDMWBrOJJKV",
           "name": "Google Sheets account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "=😎Escribe /start si quieres volver a empezar un chat.",
-        "additionalFields": {
-          "appendAttribution": false
-        }
-      },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        1712,
-        896
-      ],
-      "id": "d55015b5-4301-470a-a61d-c9ba00ddf9b5",
-      "name": "Send a text message18",
-      "webhookId": "468fd817-d81a-4c92-8e5a-d70a9f4add2e",
-      "credentials": {
-        "telegramApi": {
-          "id": "PyJfsG0XEZnuGP2r",
-          "name": "Telegram account"
         }
       }
     },
@@ -3159,7 +3135,7 @@
         ],
         [
           {
-            "node": "Send a text message18",
+            "node": "Final",
             "type": "main",
             "index": 0
           }
@@ -3655,6 +3631,17 @@
           }
         ]
       ]
+    },
+    "Send a text message15": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": true,
@@ -3662,7 +3649,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "561c6959-8e6e-4718-afe3-4c1bca692ff5",
+  "versionId": "88efe714-8035-48b7-adb5-737b4dc1bd95",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "6c8a9a9c0983ddc37972fbacc4ebc1365a461fb706f9d03153405c1deba8a620"
