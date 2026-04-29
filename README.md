@@ -23,7 +23,7 @@ A diferencia de los bots basados en IA generativa, **HelpDeskBot** utiliza un mo
 A continuación, se presenta la representación visual del flujo lógico implementado. Este diagrama muestra la interconexión entre el disparador de Telegram, los nodos de control de flujo (Switch/If) y la persistencia en Google Sheets:
 
 <p align="center">
-  <img src="." alt="Workflow HelpDeskBot n8n" width="100%">
+  <img src="N8N.png" alt="Workflow HelpDeskBot n8n" width="100%">
 </p>
 
 
